@@ -5,4 +5,14 @@
   color: #fff;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  a {
+    color: #fff;
+  }
+  ul {
+    display: flex;
+    li {
+      margin-left: 1rem;
+    }
+  }
 }

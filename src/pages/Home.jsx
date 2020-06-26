@@ -1,15 +1,17 @@
 import React, { useEffect } from "react";
 import Players from "../components/Players/Players";
-import axios from "axios";
+
+import { useDispatch } from "react-redux";
+import { getplayers } from "../redux/actions/actions";
 import "./style.scss";
 import PlayersForm from "../components/Players/PlayersForm";
 
 const Home = () => {
+  const dispatch = useDispatch();
+
   useEffect(() => {
-    axios
-      .get("http://localhost:5500/api/players")
-      .then((res) => console.log(res.data));
-  }, []);
+    dispatch(getplayers());
+  }, [dispatch]);
 
   return (
     <div className="home">

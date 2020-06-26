@@ -6,8 +6,7 @@ const PlayerItem = ({ player }) => {
   return (
     <div className="player-card">
       <h3>
-        <span className="player-card__attributes">Name:</span>{" "}
-        {name.charAt(0).toUpperCase() + name.slice(1)}
+        <span className="player-card__attributes">Name:</span> {name}
       </h3>
       <h3>
         <span className="player-card__attributes">Age:</span> {age}

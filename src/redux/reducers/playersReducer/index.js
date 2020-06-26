@@ -1,7 +1,7 @@
 import { types } from "../../types";
 
 const initialState = {
-  players: [{ name: "frank", age: 21, description: "fast player" }],
+  players: [],
 };
 
 export const playerReducers = (state = initialState, action) => {
@@ -9,6 +9,7 @@ export const playerReducers = (state = initialState, action) => {
     case types.GET_PLAYER:
       return {
         ...state,
+        players: action.payload,
       };
 
     case types.ADD_PLAYER:
