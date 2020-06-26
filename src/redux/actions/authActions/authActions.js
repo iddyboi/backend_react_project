@@ -17,7 +17,7 @@ export const register = (FormData) => async (dispatch) => {
 
   try {
     const response = await axios.post("/api/users", FormData, config);
-    success(response);
+    dispatch(success(response));
   } catch (error) {
     console.error(error);
   }
